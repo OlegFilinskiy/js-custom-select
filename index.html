@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Custom select</title>
+  <link rel="stylesheet" href="./css/custom-select.css">
+</head>
+<body>
+  <main>
+    <h1>Custom select</h1>
+    <h2>A select that is easy to customize and style is easy to apply to templates using forEach. Implemented as a module ES6 JavaScript class.</h2>
+    <hr>
+    <section>
+      <!--select!-->
+      <div data-id="custom-map-select" class="js-custom-select custom-select select-default">
+        <div class="js-header custom-select__header">
+          <div class="js-title custom-select__title"></div>
+          <div class="custom-select__arrow"></div>
+        </div>
+        <div class="custom-select__body">
+          <ul>
+            <li data-value="" data-title="Choose language" class="js-option option-placeholder">Choose language</li>
+            <li data-value="en" data-title="English" class="js-option">English</li>
+            <li data-value="it" data-title="Italian" class="js-option">Italian</li>
+            <li data-value="ru" data-title="Russian" class="js-option">Russian</li>
+            <li data-value="de" data-title="German" class="js-option">German</li>
+          </ul>
+        </div>
+        <input class="js-input" type="hidden" name="language" required autocomplete="off">
+      </div>
+      <!--select!-->
+    </section>
+  </main>
+  <script src="./js/custom-select.js"></script>
+</body>
+</html>

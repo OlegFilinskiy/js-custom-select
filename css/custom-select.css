@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family:
+    system-ui,
+    /* macOS 10.11-10.12 */ -apple-system,
+    /* Windows 6+ */ Segoe UI,
+    /* Android 4+ */ Roboto,
+    /* Ubuntu 10.10+ */ Ubuntu,
+    /* Gnome 3+ */ Cantarell,
+    /* KDE Plasma 5+ */ Noto Sans,
+    /* fallback */ sans-serif,
+    /* macOS emoji */ "Apple Color Emoji",
+    /* Windows emoji */ "Segoe UI Emoji",
+    /* Windows emoji */ "Segoe UI Symbol",
+    /* Linux emoji */ "Noto Color Emoji";
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 30px;
+}
+
+section {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin-top: 100px;
+}
+
+/* Default styles for select */
+.custom-select {
+  position: relative;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.custom-select.error .custom-select__header {
+  border-color: red;
+}
+
+.custom-select.opened .custom-select__arrow {
+  margin-top: 4px;
+}
+
+.custom-select.opened .custom-select__arrow:before {
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-top-color: inherit;
+  border-left-color: inherit;
+}
+
+.custom-select.opened .custom-select__header {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.custom-select.opened .custom-select__body {
+  display: block;
+}
+
+.custom-select__header, .custom-select__body {
+  border-width: 1px;
+  border-style: solid;
+}
+
+.custom-select__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 4rem 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.custom-select__arrow {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  width: 10px;
+  height: 10px;
+  margin-top: -3px;
+  transform: translateY(-50%);
+}
+
+.custom-select__arrow:before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(45deg);
+}
+
+.custom-select__body {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 1rem 1rem;
+  background-color: #ffffff;
+  border-top: none;
+  z-index: 5;
+}
+
+.custom-select__body > ul > li {
+  display: block;
+  cursor: pointer;
+}
+
+.custom-select__body > ul > li.option-placeholder {
+  display: none;
+}
